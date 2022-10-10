@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+  zipkin:
+    base-url: http://128.199.218.101:9411
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
